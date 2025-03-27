@@ -13,7 +13,7 @@ h1{
 }
 #productsCart {
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea */
+    flex-wrap: wrap; 
     gap: 20px;
     max-width: 800px;
     justify-content: center;

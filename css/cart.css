@@ -80,46 +80,42 @@
 }
 
 .cart-items {
-    list-style-type: none; /* Elimina los puntos de la lista */
+    list-style-type: none; 
     padding: 0;
     margin: 0;
 }
 
-/* Estilo general para los elementos de la lista */
 .cart-item {
-    display: flex;  /* Habilita Flexbox */
-    justify-content: space-between;  /* Deja espacio entre el nombre del producto y el botón */
-    align-items: center;  /* Alinea verticalmente los elementos */
-    padding: 10px 0;  /* Espaciado entre productos */
-    border-bottom: 1px solid #ddd;  /* Línea separadora entre los productos */
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+    padding: 10px 0;  
+    border-bottom: 1px solid #ddd;  
 }
 
-/* Alinea el nombre y precio del producto a la izquierda */
+
 .name-price {
-    flex: 1; /* Esto hace que el nombre y el precio ocupen el espacio disponible */
+    flex: 1; 
     display: flex;
     justify-content: space-between;
 }
 
-/* Estilo para el botón "remove" */
 .remove-item {
     background-color: transparent;
     border: none;
     color: #B66541;
     cursor: pointer;
-    font-size: 24px;  /* Tamaño más grande para el ícono */
+    font-size: 24px;  
     padding: 0;
-    margin-left: 10px;  /* Espacio entre el nombre del producto y el botón */
+    margin-left: 10px;  
 }
 
-/* Efecto hover sobre el botón de eliminar */
 .remove-item:hover {
-    opacity: 0.7;  /* Añade un efecto visual cuando el usuario pasa el ratón */
+    opacity: 0.7;  
 }
 
-/* Estilo para el SVG del botón de eliminar */
 .remove-item svg {
     width: 24px;
     height: 24px;
-    fill: #B66541;  /* Color del ícono */
+    fill: #B66541;  
 }
