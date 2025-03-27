@@ -31,7 +31,6 @@
     font-family: 'Raleway', sans-serif;
 }
 
-/* Modal del carrito */
 .cart-modal {
     display: none;
     position: fixed;
@@ -55,6 +54,7 @@
     font-family: 'Raleway', sans-serif;
 }
 
+
 .close-cart {
     cursor: pointer;
     float: right;
@@ -65,17 +65,10 @@
     background-color: #ffffff;
     border: none;
     padding: 5px;
-    margin-left:40px;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 100%;
     margin-bottom: 10px;
-
-}
-.cart-items li {
-    display: flex;
-    justify-content: space-between; /* Para separar el nombre y el precio */
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;  /* Línea separadora entre productos */
+    margin-left: 50px;
 }
 
 /* Estilo para el total */
@@ -84,4 +77,49 @@
     font-weight: bold;
     text-align: right;
     margin-top: 20px;
+}
+
+.cart-items {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo general para los elementos de la lista */
+.cart-item {
+    display: flex;  /* Habilita Flexbox */
+    justify-content: space-between;  /* Deja espacio entre el nombre del producto y el botón */
+    align-items: center;  /* Alinea verticalmente los elementos */
+    padding: 10px 0;  /* Espaciado entre productos */
+    border-bottom: 1px solid #ddd;  /* Línea separadora entre los productos */
+}
+
+/* Alinea el nombre y precio del producto a la izquierda */
+.name-price {
+    flex: 1; /* Esto hace que el nombre y el precio ocupen el espacio disponible */
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilo para el botón "remove" */
+.remove-item {
+    background-color: transparent;
+    border: none;
+    color: #B66541;
+    cursor: pointer;
+    font-size: 24px;  /* Tamaño más grande para el ícono */
+    padding: 0;
+    margin-left: 10px;  /* Espacio entre el nombre del producto y el botón */
+}
+
+/* Efecto hover sobre el botón de eliminar */
+.remove-item:hover {
+    opacity: 0.7;  /* Añade un efecto visual cuando el usuario pasa el ratón */
+}
+
+/* Estilo para el SVG del botón de eliminar */
+.remove-item svg {
+    width: 24px;
+    height: 24px;
+    fill: #B66541;  /* Color del ícono */
 }

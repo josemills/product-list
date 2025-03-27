@@ -44,17 +44,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
         cart.forEach(item => {
             const li = document.createElement("li");
-            li.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+            li.classList.add("cart-item"); // Añadir clase a cada li para el estilo
 
-            // Crear botón de eliminar
+            // Añadir el nombre y precio al li
+            const namePriceText = document.createElement("span");
+            namePriceText.classList.add("name-price");
+            namePriceText.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+
+            // Crear el botón de eliminar
             const removeButton = document.createElement("button");
-            removeButton.textContent = "remove";
             removeButton.classList.add("remove-item");
+            removeButton.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-trash">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M4 7l16 0" />
+                    <path d="M10 11l0 6" />
+                    <path d="M14 11l0 6" />
+                    <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                    <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                </svg>
+            `; // SVG del icono de la papelera
+
             removeButton.addEventListener("click", () => removeFromCart(item.id));
 
-            // Agregar el botón de eliminar al item
+            // Agregar el nombre, precio y el botón de eliminar al li
+            li.appendChild(namePriceText);
             li.appendChild(removeButton);
+
+            // Agregar el li al carrito
             cartItemsList.appendChild(li);
+
             total += item.price;
         });
 
