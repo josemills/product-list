@@ -1,8 +1,48 @@
+body {
+    background-color: #F3EAE2;
+}
 
+h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #4B2E1E;
+    font-weight: bold;
+    margin-left: 50px;
+}
+#productsCart {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea */
+    gap: 20px;
+    max-width: 800px;
+    justify-content: center;
+}
 
+.product {
+    background-color: #E6D5B8;
+    padding: 10px;
+    width: 200px;
+    border-radius: 20px;
+    justify-content: center;
+    height: 300px;
+    margin-bottom: 20px;
+}
+.product img{
+    width: 10em;
+    height: auto;
+    margin: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(20, 20, 20, 0.1);
+}
 
-
-
+.product h2{
+    font-size: clamp(1.2rem, 2vw, 1rem);
+}
+.product .price {
+    margin-bottom: 20px;
+}
+.product p {
+    margin-top: 5px;
+}
 
 
 
@@ -10,7 +50,7 @@
 
 
 /* Estilos button add-to-Cart */
-.add-to-cart { width: 155px; height: 50px; border: none; border-radius: 0px; display: flex; align-items: center; justify-content: center; gap: 7px; color: white; font-weight: 500; position: relative; background-color: rgb(29, 29, 29); box-shadow: 0 20px 30px -7px rgba(27, 27, 27, 0.219); transition: all 0.3s ease-in-out; cursor: pointer; overflow: hidden; } 
+.add-to-cart {  font-family:'Playfair Display', serif; width:155px; height: 30px; border: none; border-radius: 50px; display: flex; align-items: center; justify-content: center; gap: 7px; color: white; font-weight: 500; position: relative; background-color: rgb(29, 29, 29); box-shadow: 0 20px 30px -7px rgba(27, 27, 27, 0.219); transition: all 0.3s ease-in-out; cursor: pointer; overflow: hidden; margin: 20px; } 
 .cart { z-index: 2; } 
 .add-to-cart:active { transform: scale(0.96); } 
 .animation { position: absolute; width: 12px; border-radius: 3px; content: ""; left: 23px; bottom: 23px; opacity: 0; z-index: 1; fill: rgb(211, 211, 211); } 
