@@ -111,9 +111,17 @@
                 </button>
             </article>
         </section>
-        <section id="cart-container"></section>
     </main>
-
+    <div class="cart-bubble" id="cart-bubble">
+        🛒<span id="cart-count">0</span>
+    </div>
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-content">
+            <span class="close-cart" id="close-cart">&times;</span>
+            <h2>Carrito</h2>
+            <ul id="cart-items"></ul>
+        </div>
+    </div>
     <script src="js/main.js"></script>
     <script src="js/cart.js" defer></script>
 </body>
